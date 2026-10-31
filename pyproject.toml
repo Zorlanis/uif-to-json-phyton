@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ko-uif-to-json"
+version = "0.5.0"
+description = "Read-only Knight Online UIF/TBL analysis and DXT/PNG dependency tracing for AI-assisted Unity migration"
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [{name = "Zorlanis"}]
+license = "MIT"
+license-files = ["LICENSE", "THIRD_PARTY_NOTICES.md"]
+dependencies = []
+keywords = ["knight-online", "uif", "tbl", "dxt", "json", "unity", "cli"]
+classifiers = [
+    "Environment :: Console",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+[project.scripts]
+uif2json = "uif2json:main"
+
+[tool.setuptools]
+py-modules = [
+    "uif2json",
+    "uif_parser",
+    "uif_assets",
+    "uif_export",
+    "uif_audit",
+    "uif_tbl",
+    "uif_tbl_crypto",
+    "uif_tbl_links",
+    "uif_tbl_audit",
+    "uif_effects",
+    "uif_migration",
+]
+include-package-data = false
